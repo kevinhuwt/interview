@@ -16,3 +16,8 @@ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 -
 
 Publish to Kafka Topic
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic --from-beginning
+
+Start Listener side first, then send message from client side. If the number of apple or orange is greater than 2, it will print OUT OF STOCK in terminal, otherwise, it will print successfully purchase.
+
+Call GET request to:
+http://localhost:8080/order?apple=2&orange=2
